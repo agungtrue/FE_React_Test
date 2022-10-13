@@ -1,0 +1,62 @@
+.alert__container {
+    border: 1px solid rgb(210, 206, 206);
+    border-radius: 3px;
+    padding: 7px;
+    margin-top: 15px;
+    cursor: pointer;
+
+    .alert__id__type {
+        display: flex;
+        justify-content: space-between;
+
+        .alert__id {
+            display: flex;
+            align-items: center;
+
+            .alert__notif {
+                margin-right: 3px;
+                background-color: #fff;
+                color: #fff;
+                border-radius: 15px;
+                font-size: 10px;
+            }
+
+            .alert__notif.active {
+                background-color: rgb(68, 118, 246);
+                color: rgb(68, 118, 246);
+            }
+        }
+
+        .alert__type {
+            background-color: rgb(255, 191, 0);
+            border-radius: 20px;
+            padding: 5px;
+            color: white;
+            font-size: 12px;
+            min-width: 60px;
+            text-align: center;
+            font-weight: bold;
+        }
+    }
+
+    .alert__info {
+        padding: 14px;
+
+        .alert__label {
+            font-weight: 500;
+            margin-bottom: 3px;
+        }
+        .alert__created_at {
+            font-weight: 500;
+            color: rgba(153, 145, 145, 0.904);
+        }
+        .alert__name {
+            margin-top: 10px;
+            color: rgb(52, 132, 237);
+        }
+    }
+}
+
+.alert__container.active {
+    border: 1px solid rgb(68, 118, 246);
+}

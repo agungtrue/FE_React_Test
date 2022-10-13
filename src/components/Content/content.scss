@@ -1,0 +1,25 @@
+.content__container {
+    min-width: auto;
+    padding: 10px;
+
+    .content__title {
+        padding: 5px;
+        border-bottom: 1px solid rgb(210, 206, 206);
+        margin-bottom: 10px;
+        min-height: 3rem;
+
+        p {
+            margin: 0px;
+        }
+        ;
+        span {
+            font-size: 12px;
+            color: rgba(124, 120, 120, 0.904);
+        }
+    }
+
+    .content__main {
+        min-height: 70vh;
+        overflow: auto;
+    }
+}

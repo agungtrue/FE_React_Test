@@ -1,0 +1,20 @@
+.alerts__container {
+    padding: 1rem;
+    background-color: rgba(245, 249, 252, 0.939);
+
+    .alerts__wrapper__content {
+        border: 1px solid rgb(210, 206, 206);
+        min-height: 90vh;
+        border-radius: 5px;
+        background-color: #fff;
+
+        .alerts__filter {
+            padding: 10px;
+            border-bottom: 1px solid rgb(210, 206, 206);
+        }
+
+        .alerts__main__content {
+            display: flex;
+        }
+    }
+}
