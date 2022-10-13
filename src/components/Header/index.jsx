@@ -12,7 +12,7 @@ function Header() {
             <div className="header__nav__left">
                 <nav>
                     <ul>
-                        <li><Link to="/dashboard">Dashboard</Link></li>
+                        <li><Link to="/">Dashboard</Link></li>
                         <li><Link to="/alerts">Alert</Link></li>
                     </ul>
                 </nav>

@@ -1,9 +1,5 @@
 import React from "react";
-import {
-    Link,
-} from "react-router-dom"
 import './alert.scss';
-
 
 function Alert({ data: alert, index, onSelected }) {
 
