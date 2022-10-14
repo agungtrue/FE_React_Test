@@ -38,7 +38,6 @@ function Alert({ data: alert, index, onSelected }) {
                 Unknown Anomally
             </div>
             <div className="alert__created_at">
-                {/* Detected at 2021-04-22 20:10:04 */}
                 Detected at { alert.createdAt }
             </div>
             <div className="alert__name">
