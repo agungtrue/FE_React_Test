@@ -1,12 +1,10 @@
 import React from "react";
-import {
-    Link,
-} from "react-router-dom"
 import './content.scss';
 
 import Chart from '../Chart'
+import AlertDetail from "../AlertDetail";
 
-function Content({ data }) {
+function Content({ data, callbackList, suspectedReason }) {
     return (
        <div className="content__container">
         <div className="content__title">
@@ -15,9 +13,11 @@ function Content({ data }) {
         </div>
         <div className="content__main">
             <Chart />
-
-            <br />
-            <p>{ data?.machine || ''}</p>
+            <AlertDetail
+                callbackList={callbackList}
+                alert={data}
+                suspectedReason={suspectedReason}
+            />
         </div>
        </div>
     );

@@ -17,6 +17,16 @@ function Alert({ data: alert, index, onSelected }) {
         isActiveElement[index].classList.add('active');
     };
 
+    const handleTypeAnomally = (data) => {
+        const { anomaly } = data;
+        let basicColor = 'rgb(255, 191, 0)';
+
+        if (anomaly === 'Mild') basicColor = 'green';
+        else if (anomaly === 'Severe') basicColor = 'red';
+
+        return basicColor;
+    };
+
     return (
        <div
             className={`alert__container`}
@@ -29,13 +39,13 @@ function Alert({ data: alert, index, onSelected }) {
                 </span>
                 ID { alert.alertId }
             </div>
-            <div className="alert__type">
+            <div className="alert__type" style={{ backgroundColor: handleTypeAnomally(alert) }}>
                 { alert.anomaly }
             </div>
         </div>
         <div className="alert__info">
             <div className="alert__label">
-                Unknown Anomally
+                { alert?.suspectedReason?.reason_name || '' }
             </div>
             <div className="alert__created_at">
                 {/* Detected at 2021-04-22 20:10:04 */}

@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from "react";
-import {
-    Link,
-} from "react-router-dom"
 import './sideBarList.scss';
 import axios from 'axios'
 import { userLogin } from '../../services/userToken';
 
 import Alert from '../Alert';
 
-function SideBarList({ callbackSelected }) {
+function SideBarList({ callbackSelected, isReFetch }) {
     const [alertState, setAlertState] = useState([]);
 
     // methods
@@ -35,7 +32,6 @@ function SideBarList({ callbackSelected }) {
         } catch (err) {
             console.error(err)
         }
-       
     }
 
     function onSelected(data) {
@@ -44,9 +40,12 @@ function SideBarList({ callbackSelected }) {
     }
     // methods
 
+    // first load and refetch
     useEffect(() => {
+        // i just realize that i make some mistake when call the api list,
+        // i think should be in parent (alert page) instead of child (side bar)
         getAlertData();
-    }, []);
+    }, [isReFetch]);
 
     return (
        <div className="side_bar_list__container">
