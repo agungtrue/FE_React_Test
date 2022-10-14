@@ -1,11 +1,14 @@
 import React from "react";
+import {
+    Link,
+} from "react-router-dom"
 import './chart.scss';
 
 
 function Chart() {
     return (
        <div className="chart__container">
-        Chart || I haven't finished this part
+        Chart
        </div>
     );
 }
